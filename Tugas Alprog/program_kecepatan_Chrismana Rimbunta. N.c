@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 float v,s,t,i;
 
 
@@ -8,76 +9,102 @@ int main(){
 	input_pil();
 	eksekusi();
 
+	return 0;
+
 }
 
-void identitas(void){
+int identitas(){
 	printf("========================================================= \n");
 	printf("====                Program ini dibuat               ==== \n");
 	printf("====                       oleh                      ==== \n");
 	printf("====             Chrismana Rimbunta. N               ==== \n");
-	printf("========================================================= \n\n\n\n\n");
+	printf("========================================================= \n\n\n");
+
+	return 0;
 }
 
-void pilihan_menu(void){
+int pilihan_menu(){
     printf("======================================================== \n");
     printf("=====Program menghitung kecepatan, waktu,dan jarak ===== \n");
     printf("========================================================= \n");
     printf(" 1. Menghitung kecepatan \n 2. Menghitung waktu \n 3. Menghitung jarak\n");
+
+    return 0;
 }
 
-void input_pil(void){
-	printf("\nMasukkan pilihan : ");
-        scanf("%f", &i);
+int input_pil(){
+    printf("\nMasukkan pilihan : ");
+    scanf("%f", &i);
+
+    return 0;
 
 }
-void eksekusi(void){
-	if (i==1){
-		program_kecepatan();
 
+int eksekusi(){
 
-        }
+    if (i==1){
 
-		else if (i==2){
-		program_waktu();
+    program_kecepatan();
+    printf("maka kecepatannya adalah %.2f m/s", v);
 
-		}
+    return 0;
 
-		else if (i==3){
-		program_jarak();
+    }
 
-		}
+    else if (i==2){
+    program_waktu();
+    printf("maka waktunya adalah %.2f s", t);
+
+    return 0;
+
+    }
+
+    else if (i==3){
+    program_jarak();
+    printf("maka jaraknya adalah %.2f m", s);
+
+    return 0;
+
+    }
 
 }
-void program_kecepatan(float s, float t){
-		printf("============================\n");
-		printf("Program menghitung kecepatan\n");
-		printf("============================\n");
-		printf("Masukkan jarak (m): ");
-            scanf("%f", &s);
-        printf("Masukkan waktu (s): ");
-            scanf("%f", &t);
-		v=s/t;
-		printf("Kecepatannya adalah %.2f m/s", v);
+
+int program_kecepatan(){
+    printf("============================\n");
+    printf("Program menghitung kecepatan\n");
+    printf("============================\n");
+    printf("Masukkan jarak (m): ");
+        scanf("%f", &s);
+    printf("Masukkan waktu (s): ");
+        scanf("%f", &t);
+    v=s/t;
+
+    return 0;
+
 }
-void program_waktu(float s, float v){
-		printf("========================\n");
-		printf("Program menghitung waktu\n");
-		printf("========================\n");
-		printf("Masukkan jarak (m): ");
-            scanf("%f", &s);
-        printf("Masukkan kecepatan (m/s) : ");
-            scanf("%f", &v);
-		t=s/v;
-		printf("Waktunya adalah %.2f s", t);
+int program_waktu(){
+    printf("========================\n");
+    printf("Program menghitung waktu\n");
+    printf("========================\n");
+    printf("Masukkan jarak (m): ");
+        scanf("%f", &s);
+    printf("Masukkan kecepatan (m/s) : ");
+        scanf("%f", &v);
+    t=s/v;
+
+    return 0;
+
 }
-void program_jarak(float v, float s){
-		printf("========================\n");
-		printf("Program menghitung jarak\n");
-		printf("========================\n");
-		printf("Masukkan waktu (s): ");
-            scanf("%f", &t);
-		printf("Masukkan kecepatan (m/s): ");
-            scanf("%f", &v);
-		s=v*t;
-		printf("Jaraknya adalah %.2f m", s);
+int program_jarak(){
+    printf("========================\n");
+    printf("Program menghitung jarak\n");
+    printf("========================\n");
+    printf("Masukkan waktu (s): ");
+        scanf("%f", &t);
+    printf("Masukkan kecepatan (m/s): ");
+        scanf("%f", &v);
+    s=v*t;
+
+    return 0;
+
 }
